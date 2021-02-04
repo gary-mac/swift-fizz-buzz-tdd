@@ -2,10 +2,19 @@ import Foundation
 
 class Brain {
     
-    func isDivisibleByThreeAndFive(number: Int) -> Bool {
-        if number % 3 == 0 || number % 5 == 0 {
+    func isDivisibleBy(divisor: Int, number: Int) -> Bool {
+          if number % divisor == 0 {
             return true
+          } else {
+            return false
+          }
         }
-        return false
-    }
+    
+    func isDivisibleByThree(number: Int) -> Bool {
+            return isDivisibleBy(divisor: 3, number: number)
+        }
+    
+    func isDivisibleByFive(number: Int) -> Bool {
+            return isDivisibleBy(divisor: 5, number: number)
+        }
 }
