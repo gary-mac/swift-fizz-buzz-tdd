@@ -10,6 +10,16 @@ class Brain {
           }
         }
     
+    func check(number: Int) -> String {
+      if isDivisibleByThree(number: number) {
+        return "Fizz"
+      } else if isDivisibleByFive(number: number) {
+        return "Buzz"
+      } else {
+        return "FizzBuzz"
+      }
+    }
+    
     func isDivisibleByThree(number: Int) -> Bool {
             return isDivisibleBy(divisor: 3, number: number)
         }
