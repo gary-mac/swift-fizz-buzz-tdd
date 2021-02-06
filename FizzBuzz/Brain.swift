@@ -3,20 +3,18 @@ import Foundation
 class Brain {
     
     func isDivisibleBy(divisor: Int, number: Int) -> Bool {
-          if number % divisor == 0 {
-            return true
-          } else {
-            return false
-          }
+        return number % divisor == 0
         }
     
     func check(number: Int) -> String {
-      if isDivisibleByThree(number: number) {
+      if isDivisibleByFifteen(number: number) {
+        return "FizzBuzz"
+      } else if isDivisibleByThree(number: number) {
         return "Fizz"
-      } else if isDivisibleByFive(number: number) {
+      } else if isDivisibleByFive(number: number){
         return "Buzz"
       } else {
-        return "FizzBuzz"
+        return "\(number)"
       }
     }
     
