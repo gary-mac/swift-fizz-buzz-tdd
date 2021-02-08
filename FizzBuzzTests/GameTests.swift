@@ -17,13 +17,19 @@ class GameTests: XCTestCase {
     }
     
     func testOnPlayScoreIncremented() {
-      game.play()
-      XCTAssertTrue(game.score == 1)
-    }
+            _ = game.play(move: "1")
+            XCTAssertTrue(game.score == 1)
+        }
+
+        func testOnPlayTwiceScoreIncremented() {
+            _ = game.play(move: "1")
+            _ = game.play(move: "1")
+            XCTAssertTrue(game.score == 2)
+        }
     
-    func testOnPlayTwiceScoreIncremented() {
-          game.score = 1
-          game.play()
-          XCTAssertTrue(game.score == 2)
-      }
+    func testIfMoveIsRight() {
+      game.score = 2
+      let result = game.play(move: "Fizz")
+      XCTAssertEqual(result, true)
+    }
 }
