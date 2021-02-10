@@ -17,24 +17,61 @@ class GameTests: XCTestCase {
     }
     
     func testOnPlayScoreIncremented() {
-            _ = game.play(move: "1")
-            XCTAssertTrue(game.score == 1)
-        }
+        _ = game.play(move: "1")
+        XCTAssertTrue(game.score == 1)
+    }
 
     func testOnPlayTwiceScoreIncremented() {
-            _ = game.play(move: "1")
-            _ = game.play(move: "2")
-            XCTAssertTrue(game.score == 2)
-        }
-    func testIfMoveIsWrong() {
-      game.score = 1
-      let result = game.play(move: "Fizz")
-      XCTAssertEqual(result, false)
+        _ = game.play(move: "1")
+        _ = game.play(move: "2")
+        XCTAssertTrue(game.score == 2)
     }
     
-    func testIfMoveIsRight() {
-      game.score = 2
-      let result = game.play(move: "Fizz")
-      XCTAssertEqual(result, true)
+    func testIfFizzMoveIsWrong() {
+        game.score = 1
+        let result = game.play(move: "Fizz")
+        XCTAssertEqual(result, false)
+    }
+    
+    func testIfFizzMoveIsRight() {
+        game.score = 2
+        let result = game.play(move: "Fizz")
+        XCTAssertEqual(result, true)
+    }
+    
+    func testIfBuzzMoveRight() {
+        game.score = 4
+        let result = game.play(move: "Buzz")
+        XCTAssertEqual(result, true)
+    }
+
+    func testIfBuzzMoveWrong() {
+        game.score = 1
+        let result = game.play(move: "Buzz")
+        XCTAssertEqual(result, false)
+    }
+
+    func testIfFizzBuzzMoveRight() {
+        game.score = 14
+        let result = game.play(move: "FizzBuzz")
+        XCTAssertEqual(result, true)
+    }
+
+    func testIfFizzBuzzMoveWrong() {
+        game.score = 1
+        let result = game.play(move: "FizzBuzz")
+        XCTAssertEqual(result, false)
+    }
+
+    func testIfNumberMoveRight() {
+        game.score = 1
+        let result = game.play(move: "2")
+        XCTAssertEqual(result, true)
+    }
+    
+    func testIfNumberMoveWrong() {
+        game.score = 2
+        let result = game.play(move: "3")
+        XCTAssertEqual(result, false)
     }
 }
