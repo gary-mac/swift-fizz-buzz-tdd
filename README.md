@@ -1,2 +1,2 @@
 # Swift_FizzBuzz
-FizzBuzz Kata using Swift and TDD
+TDD FizzBuzz Kata using Swift and Swift UI
