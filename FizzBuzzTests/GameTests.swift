@@ -1,10 +1,3 @@
-//
-//  GaneTests.swift
-//  FizzBuzzTests
-//
-//  Created by Gary Maccabe on 06/02/2021.
-//
-
 import XCTest
 @testable import FizzBuzz
 

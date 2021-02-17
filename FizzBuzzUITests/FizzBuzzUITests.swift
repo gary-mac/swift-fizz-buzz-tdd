@@ -1,10 +1,3 @@
-//
-//  FizzBuzzUITests.swift
-//  FizzBuzzUITests
-//
-//  Created by Gary Maccabe on 01/02/2021.
-//
-
 import XCTest
 
 class FizzBuzzUITests: XCTestCase {
